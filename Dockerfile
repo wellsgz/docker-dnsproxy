@@ -8,3 +8,5 @@ RUN set -ex \
     && ls dnsproxy* | tail -1 | xargs tar zxfv \
     && cp ./linux-amd64/dnsproxy /usr/local/bin \
     && rm -rf /root/*
+
+ENTRYPOINT ["/usr/local/bin/dnsproxy"]
